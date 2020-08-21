@@ -1,0 +1,21 @@
+{
+  "name": "node_sqs_poc",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start-orders": "node ./orders/index.js 8081",
+    "start-worker": "node ./worker/index.js",
+    "start": "npm-run-all -p -r start-orders start-worker"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "aws-sdk": "^2.727.1",
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1",
+    "nodemailer": "^6.4.11",
+    "npm-run-all": "^4.1.5",
+    "sqs-consumer": "^5.4.0"
+  }
+}
